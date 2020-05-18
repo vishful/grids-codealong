@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            /*grid-template-columns: 1fr 2fr;*/
+            grid-template-columns: repeat(2, 1fr 2fr);
+            grid-gap: 1em;
+            grid-auto-rows: minmax(100px);
+            /*justify-items: center;
+            align-items: center;*/
+              /*default position is stretch in both justify and align*/
+        }
+        .grid-container>div{
+               padding: 1em;
+               background-color: peachpuff; 
+        }
+        .grid-container>div:nth-child(even)
+        {
+            background-color: plum;
+        }
+        /*#div1{
+            justify-self: center;
+            align-self: center;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div id="div1">Lorem eum? 1</div>
+        <div>Lorem eum? 2</div>
+        <div>Lorem eum? 3</div>
+        <div>Lorem eum? 4</div>
+        <div>Lorem eum? 5</div>
+
+    </div>
+    
+</body>
+</html>
